@@ -1,0 +1,26 @@
+Project Roadmap / Goals
+
+Interfaces:
+  GUI interface written in WxPython
+  Easy-to-use Console interface
+Ports:
+ Make PythonSafe work on Symbian OS and Android
+ Generate installer / setup files
+ Create Windows binary using Py2exe
+Functionality:
+ Configurable Password generator (selectable character set, etc)
+ Option for pronouncable passwords
+ Option to make passwords from fragments of memorable words
+ Reminders for password changes
+ Option to generate site-specific passwords by hashing site with master password
+ Copy + Paste support
+ Configurable encryption/hashing algorithms
+ Manage other secure info (not just passwords)
+ Flexible data storage fields
+ Support for Key files as well as master passwords
+ Support for synchronisation between multiple PCs/devices
+ Avoid keeping cleartext passwords in memory
+ Plugin support
+ Support for nested categories / tags for organisation
+Compatibility:
+ Import/Export for Keepass / Password Safe / CSV / etc

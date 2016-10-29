@@ -1,0 +1,32 @@
+2010-06-03 version 0.16
+  Improved search
+  Fixed GUI
+
+2010-06-02 version 0.15
+  Added search functionality
+  Simplified manager class
+  Console improvements
+  Indentation moving slowly to 4 spaces rather than 2
+  Added Guid to PasswordObject
+
+2010-05-28 version 0.14
+  Added semi-memorable password generator
+  GUI improvements
+
+2009-11-26 version 0.13
+  Created simple keepass 2.0 xml file importer
+  Updated keepass importer to correctly handle history and additional info
+  Changed file access to binary mode
+
+2009-09-28 version 0.12
+  Implemented rijndael to minimise external dependencies
+
+2009-09-26 version 0.11
+  Cleaned up module imports
+  Added minimum length to password generator to prevent crashes
+
+2009-09-24 PythonSafe project created
+  Initial code uploaded to SVN, console based password administrator
+  Effectively version 0.1
+
+

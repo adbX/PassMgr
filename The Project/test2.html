@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #ffffff; }
+body .c { color: #888888 } /* Comment */
+body .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+body .k { color: #008800; font-weight: bold } /* Keyword */
+body .cm { color: #888888 } /* Comment.Multiline */
+body .cp { color: #cc0000; font-weight: bold } /* Comment.Preproc */
+body .c1 { color: #888888 } /* Comment.Single */
+body .cs { color: #cc0000; font-weight: bold; background-color: #fff0f0 } /* Comment.Special */
+body .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #aa0000 } /* Generic.Error */
+body .gh { color: #333333 } /* Generic.Heading */
+body .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #555555 } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #666666 } /* Generic.Subheading */
+body .gt { color: #aa0000 } /* Generic.Traceback */
+body .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008800 } /* Keyword.Pseudo */
+body .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #888888; font-weight: bold } /* Keyword.Type */
+body .m { color: #0000DD; font-weight: bold } /* Literal.Number */
+body .s { color: #dd2200; background-color: #fff0f0 } /* Literal.String */
+body .na { color: #336699 } /* Name.Attribute */
+body .nb { color: #003388 } /* Name.Builtin */
+body .nc { color: #bb0066; font-weight: bold } /* Name.Class */
+body .no { color: #003366; font-weight: bold } /* Name.Constant */
+body .nd { color: #555555 } /* Name.Decorator */
+body .ne { color: #bb0066; font-weight: bold } /* Name.Exception */
+body .nf { color: #0066bb; font-weight: bold } /* Name.Function */
+body .nl { color: #336699; font-style: italic } /* Name.Label */
+body .nn { color: #bb0066; font-weight: bold } /* Name.Namespace */
+body .py { color: #336699; font-weight: bold } /* Name.Property */
+body .nt { color: #bb0066; font-weight: bold } /* Name.Tag */
+body .nv { color: #336699 } /* Name.Variable */
+body .ow { color: #008800 } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #0000DD; font-weight: bold } /* Literal.Number.Bin */
+body .mf { color: #0000DD; font-weight: bold } /* Literal.Number.Float */
+body .mh { color: #0000DD; font-weight: bold } /* Literal.Number.Hex */
+body .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+body .mo { color: #0000DD; font-weight: bold } /* Literal.Number.Oct */
+body .sb { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Backtick */
+body .sc { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Char */
+body .sd { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Doc */
+body .s2 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Double */
+body .se { color: #0044dd; background-color: #fff0f0 } /* Literal.String.Escape */
+body .sh { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Heredoc */
+body .si { color: #3333bb; background-color: #fff0f0 } /* Literal.String.Interpol */
+body .sx { color: #22bb22; background-color: #f0fff0 } /* Literal.String.Other */
+body .sr { color: #008800; background-color: #fff0ff } /* Literal.String.Regex */
+body .s1 { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Single */
+body .ss { color: #aa6600; background-color: #fff0f0 } /* Literal.String.Symbol */
+body .bp { color: #003388 } /* Name.Builtin.Pseudo */
+body .vc { color: #336699 } /* Name.Variable.Class */
+body .vg { color: #dd7700 } /* Name.Variable.Global */
+body .vi { color: #3333bb } /* Name.Variable.Instance */
+body .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">Workbook</span><span class="p">,</span> <span class="n">load_workbook</span>
+<span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">sha256</span>
+<span class="kn">import</span> <span class="nn">pyperclip</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">add_entry</span><span class="p">():</span>
+    <span class="c"># check if file exists</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">wb</span> <span class="o">=</span> <span class="n">Workbook</span><span class="p">()</span>
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">active</span>
+
+        <span class="c"># set names of columns</span>
+        <span class="n">ws</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">&quot;Service&quot;</span><span class="p">,</span> <span class="s">&quot;Username&quot;</span><span class="p">,</span> <span class="s">&quot;Password&quot;</span><span class="p">])</span>
+
+    <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">mp42xl</span><span class="p">()</span>
+        <span class="n">wb</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span>
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">active</span>
+
+    <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">wb</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span>
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">active</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;File error&quot;</span>
+
+    <span class="c"># input information</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter the service/website: &quot;</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter your username: &quot;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter your password: &quot;</span><span class="p">)</span>
+
+    <span class="n">ws</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">service</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">])</span>
+    <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span>
+    <span class="n">xl2mp4</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">generate</span><span class="p">():</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+                <span class="s">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+                <span class="s">&#39;0123456789!@#$%^&amp;*()-_&#39;</span><span class="p">)</span>
+
+    <span class="n">my_key</span> <span class="o">=</span> <span class="s">&#39;3141592653589adb3141592653589&#39;</span>
+
+    <span class="k">def</span> <span class="nf">create_hex</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span> <span class="n">plaintext</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sha256</span><span class="p">(</span><span class="n">salt</span> <span class="o">+</span> <span class="n">plaintext</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">make_password</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">service</span><span class="p">):</span>
+        <span class="n">salt</span> <span class="o">=</span> <span class="n">create_hex</span><span class="p">(</span><span class="n">my_key</span><span class="p">,</span> <span class="n">service</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
+        <span class="n">hsh</span> <span class="o">=</span> <span class="n">create_hex</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span> <span class="n">plaintext</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">salt</span><span class="p">,</span> <span class="n">hsh</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">service</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alphabet</span><span class="p">):</span>
+        <span class="n">raw_hex</span> <span class="o">=</span> <span class="n">make_password</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">service</span><span class="p">)</span>
+
+        <span class="c"># Convert the hex to dec</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_hex</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+
+        <span class="n">num_chars</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+
+        <span class="n">chars</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
+            <span class="n">num</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">num_chars</span><span class="p">)</span>
+            <span class="n">chars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="n">clip</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">clip</span>
+        <span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">clip</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s">&quot;Copied to Clipboard!&quot;</span>
+
+    <span class="n">master_pass</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter your master password: &quot;</span><span class="p">)</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter the service/website: &quot;</span><span class="p">)</span>
+    <span class="n">password</span><span class="p">(</span><span class="n">master_pass</span><span class="p">,</span> <span class="n">service</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">view_entries</span><span class="p">():</span>
+    <span class="n">mp42xl</span><span class="p">()</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">&quot;start &quot;</span><span class="o">+</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">)</span>
+
+    <span class="n">close_inp</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter &#39;x&#39; if you closed the file&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">close_inp</span> <span class="o">==</span> <span class="s">&quot;x&quot;</span><span class="p">:</span>
+        <span class="n">xl2mp4</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">purge</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">,</span> <span class="s">&quot;wb&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="o">*</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">))</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">xl2mp4</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">))</span>
+    <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;.mp4&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">&quot;info.xlsx&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">mp42xl</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">))</span>
+    <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;.xlsx&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">&quot;info.mp4&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Welcome to PassMgr!&quot;</span>
+    <span class="k">print</span> <span class="s">&quot;1 for Entering new information&quot;</span>
+    <span class="k">print</span> <span class="s">&quot;2 for Generating a password&quot;</span>
+    <span class="k">print</span> <span class="s">&quot;3 for Purging all information&quot;</span>
+    <span class="k">print</span> <span class="s">&quot;4 for Viewing existing information&quot;</span>
+    <span class="k">print</span> <span class="s">&quot;5 to Exit&quot;</span>
+
+    <span class="n">option</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter one of the above options: &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">add_entry</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">generate</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">purge</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">view_entries</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></body>
+</html>

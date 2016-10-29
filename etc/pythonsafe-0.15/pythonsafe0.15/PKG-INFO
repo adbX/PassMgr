@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: PythonSafe
+Version: 0.15
+Supported-Platform: i386-win32
+Supported-Platform: GNU/Linux
+Summary: A password manager
+Home-page: http://pythonsafe.sourceforge.net
+Author: Richard Beales
+
